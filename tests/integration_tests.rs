@@ -1,7 +1,11 @@
-use vulkano_graphics::add;
+use vulkano_graphics::create_window;
 
 #[test]
-fn it_adds_two() {
-    let result = add(2u64, 2u64);
-    assert_eq!(result, 4);
+fn cloud_create_window() {
+    assert!(create_window().is_err());
+}
+
+#[test]
+fn client_create_window() {
+    create_window().unwrap();
 }
