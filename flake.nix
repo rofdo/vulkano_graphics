@@ -1,6 +1,4 @@
 {
-  description = "Development environment for Bevy on NixOS with libxkbcommon focus";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -16,10 +14,13 @@
           buildInputs = with pkgs; [
             libxkbcommon
 
-            # Additional dependencies for Bevy
             vulkan-loader
             vulkan-headers
             vulkan-tools
+
+            rustup
+            cargo-cross
+            cmake
           ];
           
           shellHook = ''
