@@ -1,7 +1,7 @@
 use vulkano_graphics::create_window;
 
 #[test]
-fn cloud_create_window() {
+fn server_create_window() {
     assert!(create_window().is_err());
 }
 
